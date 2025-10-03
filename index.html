@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo</title>
+  </head>
+  <body>
+    <button onclick="muestra()">Click</button>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+      const valores = [6, 7, 9, 2];
+      const parrafos = document.querySelectorAll("p");
+      function muestra(){
+        valores.forEach((v,i) => {
+          parrafos[i].innerHTML = emojis(v);
+        })
+      }
+      function emojis(n){
+        var imprime = ""
+        for(var x = 0; x < n; x++){
+          imprime += "🥰 "
+        }
+        return imprime;
+      }
+    </script>
+  </body>
+</html>
